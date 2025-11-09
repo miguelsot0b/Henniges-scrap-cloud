@@ -5,7 +5,7 @@ services:
     region: oregon
     plan: starter
     buildCommand: pip install -r requirements.txt && playwright install chromium
-    schedule: "0 8 * * *"  # Diario a las 8:00 AM UTC (2:00 AM México)
+    schedule: "25,55 * * * *"  # Cada 30 minutos (a los 25 y 55 minutos de cada hora)
     startCommand: python plex_downloader.py
     envVars:
       - key: PYTHON_VERSION
