@@ -18,6 +18,16 @@ preview-*.csv
 henniges-*.json
 service-account*.json
 
+# Render local files
+.render/
+
+# Scripts auxiliares de desarrollo
+diagnose_duplicates.py
+search_cost.py
+fix_csv_linebreaks.py
+check_columns.py
+analyze_scrap.py
+
 # OS files
 Thumbs.db
 Desktop.ini

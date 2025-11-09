@@ -108,6 +108,22 @@ Esto generará archivos de preview:
    - Directorio inicial: `C:\ruta\al\proyecto`
 4. Configura la frecuencia (diaria recomendada)
 
+### Despliegue en Render (Recomendado para Producción)
+
+Para ejecutar en la nube de forma automática y sin servidor local:
+
+1. Lee la guía completa: **[DEPLOY_RENDER.md](./DEPLOY_RENDER.md)**
+2. Configura un Cron Job en Render
+3. Define las variables de entorno
+4. ¡Listo! Se ejecutará automáticamente
+
+**Ventajas de Render:**
+- ✅ Gratis (400 horas/mes)
+- ✅ Sin servidor local 24/7
+- ✅ Logs centralizados
+- ✅ Notificaciones de errores
+- ✅ Deploy automático desde GitHub
+
 ## 📊 Integración con Power Query
 
 Los archivos en Google Drive están configurados para descarga directa. Usa estos links en Power Query:

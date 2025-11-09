@@ -1,0 +1,32 @@
+services:
+  - type: cron
+    name: henniges-scrap-production-sync
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r requirements.txt && playwright install chromium
+    schedule: "0 8 * * *"  # Diario a las 8:00 AM UTC (2:00 AM México)
+    startCommand: python plex_downloader.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: /opt/render/.cache/ms-playwright
+      - key: PLEX_USERNAME
+        sync: false
+      - key: PLEX_PASSWORD
+        sync: false
+      - key: GOOGLE_CREDENTIALS_B64
+        sync: false
+      - key: DRIVE_PRODUCTION_FILE_ID
+        sync: false
+      - key: DRIVE_SCRAP_FILE_ID
+        sync: false
+      - key: PRODUCTION_DATE_COLUMN
+        value: Date
+      - key: SCRAP_DATE_COLUMN
+        value: Report Date
+      - key: NORMALIZE_DATE
+        value: true
+      - key: DRY_RUN
+        value: false
