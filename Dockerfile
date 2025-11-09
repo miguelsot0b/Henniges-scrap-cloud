@@ -38,9 +38,9 @@ COPY requirements.txt .
 # Instalar dependencias de Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Instalar navegador Chromium de Playwright
-RUN playwright install chromium
-RUN playwright install-deps chromium
+# Instalar navegador Chromium de Playwright y sus dependencias
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+RUN playwright install --with-deps chromium
 
 # Copiar código de la aplicación
 COPY . .
