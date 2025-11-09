@@ -14,9 +14,9 @@ services:
       - key: GOOGLE_CREDENTIALS_B64
         sync: false
       - key: DRIVE_PRODUCTION_FILE_ID
-        sync: false
+        value: 1EhVdt8n6eIjJF0afLm5irDZQv2CDRi7w
       - key: DRIVE_SCRAP_FILE_ID
-        sync: false
+        value: 1gVbCYSpTNtWE25ZHOPHzDBnkucLIaDN9
       - key: PRODUCTION_DATE_COLUMN
         value: Date
       - key: SCRAP_DATE_COLUMN
