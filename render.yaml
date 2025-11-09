@@ -1,12 +1,11 @@
 services:
   - type: cron
     name: henniges-scrap-production-sync
-    env: python
+    env: docker
     region: oregon
     plan: starter
-    buildCommand: pip install -r requirements.txt && playwright install chromium
     schedule: "25,55 * * * *"  # Cada 30 minutos (a los 25 y 55 minutos de cada hora)
-    startCommand: python plex_downloader.py
+    dockerCommand: bash start.sh
     envVars:
       - key: PYTHON_VERSION
         value: 3.13.0
