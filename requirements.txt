@@ -1,0 +1,7 @@
+playwright>=1.45.0
+# Google Drive API
+google-api-python-client>=2.146.0
+google-auth>=2.35.0
+google-auth-httplib2>=0.2.0
+httplib2>=0.22.0
+python-dotenv>=1.0.1

@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local downloads and previews
+downloads/
+*.csv
+preview-*.csv
+
+# Env files and local settings
+.env
+.env.local
+.venv/
+.vscode/
+
+# Google Cloud credentials (CRITICAL - NEVER COMMIT)
+*.json
+henniges-*.json
+service-account*.json
+
+# OS files
+Thumbs.db
+Desktop.ini
